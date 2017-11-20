@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cracking.coding.interview;
+package cracking.coding.interview.dpcoinchange;
 
 /**
  * @author Tarl Hahn

@@ -1,13 +1,15 @@
 /**
  * 
  */
-package cracking.coding.interview;
+package cracking.coding.interview.dpcoinchange;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import cracking.coding.interview.dpcoinchange.DpCoinChange;
 
 /**
  * @author Tarl Hahn
@@ -33,7 +35,7 @@ public class DpCoinChangeTest {
 	}
 
 	/**
-	 * Test method for {@link cracking.coding.interview.DpCoinChange#waysToMakeChange(int, int[])}.
+	 * Test method for {@link cracking.coding.interview.dpcoinchange.DpCoinChange#waysToMakeChange(int, int[])}.
 	 */
 	@Test
 	public void testWaysToMakeChange() {
