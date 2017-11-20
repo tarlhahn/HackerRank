@@ -21,7 +21,8 @@ public class DpCoinChangeTest {
 	
 	public final TestCase[] cases = {
 		new TestCase(4, 4, 1, 2, 3),
-		new TestCase(5, 10, 2, 5, 3, 6)
+		new TestCase(5, 10, 2, 5, 3, 6),
+		new TestCase(3542323427L, 250, 8, 47, 13, 24, 25, 31, 32, 35, 3, 19, 40, 48, 1, 4, 17, 38, 22, 30, 33, 15, 44, 46, 36, 9, 20, 49)
 	};
 
 
@@ -40,13 +41,13 @@ public class DpCoinChangeTest {
 	@Test
 	public void testWaysToMakeChange() {
 		for(int i = 0; i < cases.length; ++i) {
-			assertThat("Cases[" + i + "]: " + cases[i].toString(), cases[i].expected, is(solution.waysToMakeChange(cases[i].n, cases[i].values)));
+			assertThat("Cases[" + i + "]: " + cases[i].toString(), solution.waysToMakeChange(cases[i].n, cases[i].values), is(cases[i].expected));
 		}
 	}
 	
 	public class TestCase {
 		
-		public final int expected;
+		public final long expected;
 		
 		public final int n;
 		
@@ -58,8 +59,8 @@ public class DpCoinChangeTest {
 		 * @param n The target sum
 		 * @param values The values to sum.
 		 */
-		public TestCase(int expect, int n, int... values) {
-			this.expected = expect;
+		public TestCase(long expected, int n, int... values) {
+			this.expected = expected;
 			this.n = n;
 			this.values = values;
 		}
